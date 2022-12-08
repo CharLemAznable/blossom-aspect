@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.github.charlemaznable</groupId>
+        <artifactId>char-dependencies</artifactId>
+        <version>2022.0.2-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>blossom-aspect</artifactId>
+    <version>2022.0.2-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>Blossom Aspect</name>
+    <url>https://github.com/CharLemAznable/blossom-aspect</url>
+    <description>Blossom With Spring AOP.</description>
+
+    <scm>
+        <connection>scm:git:https://github.com/CharLemAznable/blossom-aspect.git</connection>
+        <developerConnection>scm:git:https://github.com/CharLemAznable/blossom-aspect.git</developerConnection>
+        <url>https://github.com/CharLemAznable/blossom-aspect</url>
+    </scm>
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo1.maven.org/maven2/</url>
+            <layout>default</layout>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>sonatype</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+            <layout>default</layout>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <properties>
+        <blossom.version>2022.0.2-SNAPSHOT</blossom.version>
+        <char-httpclient.version>2022.0.2-SNAPSHOT</char-httpclient.version>
+        <gentle-factory.version>2022.0.2-SNAPSHOT</gentle-factory.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.github.bingoohuang</groupId>
+            <artifactId>eql</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.github.charlemaznable</groupId>
+            <artifactId>blossom</artifactId>
+            <version>${blossom.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.charlemaznable</groupId>
+            <artifactId>char-httpclient</artifactId>
+            <version>${char-httpclient.version}</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.github.charlemaznable</groupId>
+            <artifactId>gentle-factory</artifactId>
+            <version>${gentle-factory.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.bytebuddy</groupId>
+            <artifactId>byte-buddy</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+</project>
