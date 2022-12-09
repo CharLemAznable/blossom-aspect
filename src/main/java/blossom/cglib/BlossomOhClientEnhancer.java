@@ -21,6 +21,6 @@ public class BlossomOhClientEnhancer implements OhClientEnhancer {
 
     @Override
     public int getOrder() {
-        return 10;
+        return -10;
     }
 }

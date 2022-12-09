@@ -22,6 +22,6 @@ public class BlossomEqlerEnhancer implements EqlerEnhancer {
 
     @Override
     public int getOrder() {
-        return 10;
+        return -10;
     }
 }
