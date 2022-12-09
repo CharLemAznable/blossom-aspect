@@ -25,7 +25,7 @@ public abstract class BlossomInterceptor<T> {
 
     protected Object intercept(String fqcn, Object object, Method method, Object[] args, T methodProxy) {
         val level = parseLevel(object, method);
-        if (isNull(level)) invokeRaw(object, args, methodProxy);
+        if (isNull(level)) return invokeRaw(object, args, methodProxy);
         try {
             Blossoms.log(fqcn, level, "START: {}", newArrayList(args));
             val ret = invokeRaw(object, args, methodProxy);
