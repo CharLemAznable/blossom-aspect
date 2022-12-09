@@ -18,4 +18,9 @@ public class BlossomOhClientEnhancer implements OhClientEnhancer {
     public Callback build(Class<?> clientClass, Object clientImpl) {
         return new BlossomCglibInterceptor(clientImpl);
     }
+
+    @Override
+    public int getOrder() {
+        return 10;
+    }
 }
