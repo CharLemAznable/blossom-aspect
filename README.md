@@ -7,7 +7,13 @@
 
 ##### Maven Dependency
 
-待发布.
+```xml
+<dependency>
+  <groupId>com.github.charlemaznable</groupId>
+  <artifactId>blossom-aspect</artifactId>
+  <version>2022.0.2</version>
+</dependency>
+```
 
 ##### Maven Dependency SNAPSHOT
 
@@ -15,6 +21,6 @@
 <dependency>
   <groupId>com.github.charlemaznable</groupId>
   <artifactId>blossom-aspect</artifactId>
-  <version>2022.0.2-SNAPSHOT</version>
+  <version>2023.0.0-SNAPSHOT</version>
 </dependency>
 ```

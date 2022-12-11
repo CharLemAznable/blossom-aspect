@@ -7,11 +7,11 @@
     <parent>
         <groupId>com.github.charlemaznable</groupId>
         <artifactId>char-dependencies</artifactId>
-        <version>2022.0.2-SNAPSHOT</version>
+        <version>2023.0.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>blossom-aspect</artifactId>
-    <version>2022.0.2-SNAPSHOT</version>
+    <version>2023.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>Blossom Aspect</name>
@@ -45,9 +45,9 @@
     </repositories>
 
     <properties>
-        <blossom.version>2022.0.2-SNAPSHOT</blossom.version>
-        <char-httpclient.version>2022.0.2-SNAPSHOT</char-httpclient.version>
-        <gentle-factory.version>2022.0.2-SNAPSHOT</gentle-factory.version>
+        <blossom.version>2023.0.0-SNAPSHOT</blossom.version>
+        <char-httpclient.version>2023.0.0-SNAPSHOT</char-httpclient.version>
+        <gentle-factory.version>2023.0.0-SNAPSHOT</gentle-factory.version>
     </properties>
 
     <dependencies>
