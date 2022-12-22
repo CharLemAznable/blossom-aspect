@@ -45,6 +45,8 @@
     </repositories>
 
     <properties>
+        <sonar.projectKey>CharLemAznable_blossom-aspect</sonar.projectKey>
+
         <blossom.version>2023.0.0-SNAPSHOT</blossom.version>
         <char-httpclient.version>2023.0.0-SNAPSHOT</char-httpclient.version>
         <gentle-factory.version>2023.0.0-SNAPSHOT</gentle-factory.version>
