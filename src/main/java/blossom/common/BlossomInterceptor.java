@@ -21,14 +21,14 @@ public abstract class BlossomInterceptor<T> {
     private static final LoadingCache<Method, Boolean> voidMethodCache
             = simpleCache(from(BlossomInterceptor::lookupVoidMethod));
 
-    protected abstract Object invokeRaw(Object object, Object[] args, T methodProxy);
+    protected abstract Object invokeRaw(T methodProxy);
 
     protected Object intercept(String fqcn, Object object, Method method, Object[] args, T methodProxy) {
         val level = parseLevel(object, method);
-        if (isNull(level)) return invokeRaw(object, args, methodProxy);
+        if (isNull(level)) return invokeRaw(methodProxy);
         try {
             Blossoms.log(fqcn, level, "START: {}", newArrayList(args));
-            val ret = invokeRaw(object, args, methodProxy);
+            val ret = invokeRaw(methodProxy);
             if (isVoidMethod(method)) Blossoms.log(fqcn, level, "FINISH: void");
             else Blossoms.log(fqcn, level, "FINISH: {}", newArrayList(ret));
             return ret;

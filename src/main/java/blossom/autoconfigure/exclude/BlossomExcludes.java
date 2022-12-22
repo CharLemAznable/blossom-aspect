@@ -14,13 +14,12 @@ import static com.google.common.collect.Lists.newArrayList;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class BlossomExcludes {
 
-    private static List<Class<? extends Annotation>> excludeAnnoTypes = newArrayList();
+    private static final List<Class<? extends Annotation>> excludeAnnoTypes = newArrayList();
 
     static {
         val supplierLoaders = ServiceLoader.load(BlossomExcludeAnnotationTypeSupplier.class);
         for (val supplierLoader : supplierLoaders) {
-            Optional.ofNullable(supplierLoader.get()).ifPresent(
-                    annotations -> excludeAnnoTypes.addAll(annotations));
+            Optional.ofNullable(supplierLoader.get()).ifPresent(excludeAnnoTypes::addAll);
         }
     }
 

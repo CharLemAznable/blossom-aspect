@@ -1,7 +1,7 @@
-package blossom.cglib;
+package blossom.buddy;
 
+import com.github.charlemaznable.core.lang.BuddyEnhancer;
 import com.google.auto.service.AutoService;
-import net.sf.cglib.proxy.Enhancer;
 import org.n3r.eql.eqler.enhancer.EqlerEnhancer;
 
 import static blossom.common.BlossomElf.isFastBlossomAnnotated;
@@ -16,8 +16,9 @@ public class BlossomEqlerEnhancer implements EqlerEnhancer {
 
     @Override
     public Object build(Class eqlerClass, Object implObject) {
-        return Enhancer.create(Object.class, new Class[]{eqlerClass},
-                new BlossomCglibInterceptor(implObject));
+        return BuddyEnhancer.create(Object.class,
+                new Class[]{eqlerClass},
+                new BlossomBuddyInterceptor(implObject));
     }
 
     @Override

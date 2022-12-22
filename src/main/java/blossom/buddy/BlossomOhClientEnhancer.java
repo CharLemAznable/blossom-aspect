@@ -1,8 +1,10 @@
-package blossom.cglib;
+package blossom.buddy;
 
+import com.github.charlemaznable.core.lang.BuddyEnhancer;
+import com.github.charlemaznable.core.lang.Reloadable;
 import com.github.charlemaznable.httpclient.ohclient.enhancer.OhClientEnhancer;
+import com.github.charlemaznable.httpclient.ohclient.internal.OhDummy;
 import com.google.auto.service.AutoService;
-import net.sf.cglib.proxy.Callback;
 
 import static blossom.common.BlossomElf.isFastBlossomAnnotated;
 
@@ -15,8 +17,11 @@ public class BlossomOhClientEnhancer implements OhClientEnhancer {
     }
 
     @Override
-    public Callback build(Class<?> clientClass, Object clientImpl) {
-        return new BlossomCglibInterceptor(clientImpl);
+    public Object build(Class<?> clientClass, Object clientImpl) {
+        return BuddyEnhancer.create(OhDummy.class,
+                new Object[]{clientClass},
+                new Class[]{clientClass, Reloadable.class},
+                new BlossomBuddyInterceptor(clientImpl));
     }
 
     @Override

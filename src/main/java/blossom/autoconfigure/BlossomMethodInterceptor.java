@@ -21,7 +21,7 @@ final class BlossomMethodInterceptor extends BlossomInterceptor<MethodInvocation
 
     @SneakyThrows
     @Override
-    protected Object invokeRaw(Object object, Object[] args, MethodInvocation methodProxy) {
+    protected Object invokeRaw(MethodInvocation methodProxy) {
         return methodProxy.proceed();
     }
 }
