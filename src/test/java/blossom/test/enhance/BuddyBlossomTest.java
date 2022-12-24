@@ -1,4 +1,4 @@
-package blossom.buddy;
+package blossom.test.enhance;
 
 import com.ctrip.framework.apollo.ConfigService;
 import com.github.charlemaznable.apollo.MockApolloServer;
@@ -31,7 +31,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = TestBuddyConfig.class)
-public class BlossomBuddyTest {
+public class BuddyBlossomTest {
 
     private static final DockerImageName mysqlImageName = DockerImageName.parse("mysql:5.7.34");
     private static final MySQLContainer<?> mysql0 = new MySQLContainer<>(mysqlImageName).withDatabaseName(Eql.DEFAULT_CONN_NAME);
@@ -61,22 +61,21 @@ public class BlossomBuddyTest {
     @Autowired
     private TestBuddyEqler testEqler;
 
-    @SneakyThrows
-    @Test
-    public void testBlossomEqler() {
-        assertEquals("x", testNoneEqler.x());
-        assertEquals("y", testEqler.y());
-        assertThrows(Exception.class, () -> testEqler.z());
-    }
-
     @Autowired
     private TestBuddyNoneClient testNoneClient;
     @Autowired
     private TestBuddyClient testClient;
 
-    @SneakyThrows
     @Test
-    public void testBlossomClient() {
+    public void testWithEqler() {
+        assertEquals("x", testNoneEqler.x());
+        assertEquals("y", testEqler.y());
+        assertThrows(Exception.class, testEqler::z);
+    }
+
+    @Test
+    @SneakyThrows
+    public void testWithOhClient() {
         try (val mockWebServer = new MockWebServer()) {
             mockWebServer.setDispatcher(new Dispatcher() {
                 @Nonnull
@@ -95,7 +94,7 @@ public class BlossomBuddyTest {
 
             assertEquals("X", testNoneClient.x());
             assertEquals("Y", testClient.y());
-            assertThrows(Exception.class, () -> testClient.z());
+            assertThrows(Exception.class, testClient::z);
         }
     }
 }

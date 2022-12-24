@@ -1,4 +1,4 @@
-package blossom.autoconfigure;
+package blossom.test.aspect;
 
 import blossom.Blossom;
 import com.github.charlemaznable.core.net.Http;
@@ -9,16 +9,16 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class TestAOPController {
+public class TestAspectController {
 
     @Blossom
-    @RequestMapping("/testBlossomAOP")
+    @RequestMapping("/testBlossomAspect")
     public String testBlossomAOP(@RequestParam String param) {
         return "{" + param + "}";
     }
 
     @Blossom
-    @RequestMapping("/testBlossomAOPException")
+    @RequestMapping("/testBlossomAspectException")
     public String testBlossomAOPException(@RequestParam String param) {
         throw new RuntimeException(param);
     }

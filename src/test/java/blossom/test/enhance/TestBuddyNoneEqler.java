@@ -1,4 +1,4 @@
-package blossom.buddy;
+package blossom.test.enhance;
 
 import com.github.charlemaznable.eql.apollo.Aql;
 import org.n3r.eql.eqler.annotations.EqlerConfig;

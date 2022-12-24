@@ -1,4 +1,4 @@
-package blossom.buddy;
+package blossom.enhance;
 
 import com.github.charlemaznable.core.lang.BuddyEnhancer;
 import com.google.auto.service.AutoService;

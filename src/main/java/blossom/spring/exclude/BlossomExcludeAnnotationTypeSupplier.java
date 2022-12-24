@@ -1,4 +1,4 @@
-package blossom.autoconfigure.exclude;
+package blossom.spring.exclude;
 
 import java.lang.annotation.Annotation;
 import java.util.List;

@@ -1,5 +1,6 @@
-package blossom.autoconfigure;
+package blossom.spring;
 
+import com.github.charlemaznable.gentle.spring.factory.AutoConfigurationImport;
 import com.github.charlemaznable.gentle.spring.factory.SpringFactory;
 import lombok.val;
 import org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator;
@@ -10,10 +11,10 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@SuppressWarnings("SpringFacetCodeInspection")
 @Configuration
+@AutoConfigurationImport
 @SpringFactory(EnableAutoConfiguration.class)
-public class BlossomConfiguration {
+public class BlossomAutoConfiguration {
 
     @Bean("BlossomAdvisor")
     public DefaultPointcutAdvisor blossomAdvisor() {

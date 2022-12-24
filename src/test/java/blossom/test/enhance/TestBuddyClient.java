@@ -1,4 +1,4 @@
-package blossom.buddy;
+package blossom.test.enhance;
 
 import blossom.Blossom;
 import com.github.charlemaznable.httpclient.common.Mapping;

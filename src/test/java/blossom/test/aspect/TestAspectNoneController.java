@@ -1,13 +1,13 @@
-package blossom.autoconfigure;
+package blossom.test.aspect;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class TestAOPNoneController {
+public class TestAspectNoneController {
 
-    @RequestMapping("/testBlossomNone")
+    @RequestMapping("/testBlossomAspectNone")
     public String testBlossomNone(@RequestParam String param) {
         return "[" + param + "]";
     }

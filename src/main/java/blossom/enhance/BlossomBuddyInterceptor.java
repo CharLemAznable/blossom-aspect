@@ -1,4 +1,4 @@
-package blossom.buddy;
+package blossom.enhance;
 
 import blossom.common.BlossomInterceptor;
 import com.github.charlemaznable.core.lang.BuddyEnhancer;

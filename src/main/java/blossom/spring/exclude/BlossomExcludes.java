@@ -1,4 +1,4 @@
-package blossom.autoconfigure.exclude;
+package blossom.spring.exclude;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
