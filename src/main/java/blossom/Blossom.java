@@ -23,7 +23,7 @@ public @interface Blossom {
         DEBUG(10),
         TRACE(0);
 
-        private int levelInt;
+        private final int levelInt;
 
         Level(int i) {
             this.levelInt = i;

@@ -1,4 +1,4 @@
-package blossom.cglib;
+package blossom.enhance;
 
 import com.google.auto.service.AutoService;
 import net.sf.cglib.proxy.Enhancer;

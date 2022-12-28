@@ -11,7 +11,7 @@ import static blossom.common.BlossomCaches.isBlossomAnnotated;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class BlossomElf {
 
-    public static boolean isFastBlossomAnnotated(Class clazz) {
+    public static boolean isFastBlossomAnnotated(Class<?> clazz) {
         if (isBlossomAnnotated(clazz)) return true;
         for (val method : clazz.getMethods()) {
             if (isBlossomAnnotated(method)) return true;

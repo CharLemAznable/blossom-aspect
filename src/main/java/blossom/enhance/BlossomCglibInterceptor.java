@@ -1,8 +1,9 @@
-package blossom.cglib;
+package blossom.enhance;
 
 import blossom.common.BlossomInterceptor;
 import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
+import lombok.val;
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
 
@@ -20,7 +21,8 @@ public final class BlossomCglibInterceptor extends BlossomInterceptor<MethodProx
     @Override
     public Object intercept(Object object, Method method, Object[] args, MethodProxy methodProxy) {
         checkNotNull(target);
-        return super.intercept(object.getClass().getName(), object, method, args, methodProxy);
+        val fqcn = object.getClass().getName();
+        return super.intercept(fqcn, object, method, args, methodProxy);
     }
 
     @SneakyThrows

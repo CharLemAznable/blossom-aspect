@@ -1,4 +1,4 @@
-package blossom.autoconfigure.exclude;
+package blossom.spring.exclude;
 
 import com.github.charlemaznable.core.lang.ClzPath;
 import com.google.auto.service.AutoService;

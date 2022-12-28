@@ -1,4 +1,4 @@
-package blossom.autoconfigure;
+package blossom.spring;
 
 import blossom.Blossoms;
 import blossom.common.BlossomInterceptor;

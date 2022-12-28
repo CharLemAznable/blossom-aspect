@@ -1,6 +1,6 @@
-package blossom.autoconfigure;
+package blossom.spring;
 
-import blossom.autoconfigure.exclude.BlossomExcludes;
+import blossom.spring.exclude.BlossomExcludes;
 import lombok.val;
 import org.springframework.aop.support.StaticMethodMatcherPointcut;
 
