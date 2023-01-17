@@ -12,11 +12,9 @@ import okhttp3.mockwebserver.RecordedRequest;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.n3r.eql.Eql;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 import org.testcontainers.containers.MySQLContainer;
 import org.testcontainers.utility.DockerImageName;
 
@@ -29,8 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
-@ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = TestBuddyConfig.class)
+@SpringJUnitConfig(TestBuddyConfig.class)
 public class BuddyBlossomTest {
 
     private static final DockerImageName mysqlImageName = DockerImageName.parse("mysql:5.7.34");
