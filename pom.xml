@@ -7,11 +7,11 @@
     <parent>
         <groupId>com.github.charlemaznable</groupId>
         <artifactId>char-dependencies</artifactId>
-        <version>2023.0.0-SNAPSHOT</version>
+        <version>2023.0.1-SNAPSHOT</version>
     </parent>
 
     <artifactId>blossom-aspect</artifactId>
-    <version>2023.0.0-SNAPSHOT</version>
+    <version>2023.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>Blossom Aspect</name>
@@ -47,13 +47,13 @@
     <properties>
         <sonar.projectKey>CharLemAznable_blossom-aspect</sonar.projectKey>
 
-        <blossom.version>2023.0.0-SNAPSHOT</blossom.version>
-        <char-httpclient.version>2023.0.0-SNAPSHOT</char-httpclient.version>
-        <gentle-factory.version>2023.0.0-SNAPSHOT</gentle-factory.version>
+        <blossom.version>2023.0.1-SNAPSHOT</blossom.version>
+        <char-httpclient.version>2023.0.1-SNAPSHOT</char-httpclient.version>
+        <gentle-factory.version>2023.0.1-SNAPSHOT</gentle-factory.version>
 
-        <apollo-mockserver.version>2023.0.0-SNAPSHOT</apollo-mockserver.version>
-        <eql-apollo.version>2023.0.0-SNAPSHOT</eql-apollo.version>
-        <logback-dendrobe.version>2023.0.0-SNAPSHOT</logback-dendrobe.version>
+        <apollo-mockserver.version>2023.0.1-SNAPSHOT</apollo-mockserver.version>
+        <eql-apollo.version>2023.0.1-SNAPSHOT</eql-apollo.version>
+        <logback-dendrobe.version>2023.0.1-SNAPSHOT</logback-dendrobe.version>
     </properties>
 
     <dependencies>
