@@ -29,7 +29,7 @@
 <dependency>
   <groupId>com.github.charlemaznable</groupId>
   <artifactId>blossom-aspect</artifactId>
-  <version>2022.0.3</version>
+  <version>2022.0.4</version>
 </dependency>
 ```
 
@@ -39,6 +39,6 @@
 <dependency>
   <groupId>com.github.charlemaznable</groupId>
   <artifactId>blossom-aspect</artifactId>
-  <version>2022.0.4-SNAPSHOT</version>
+  <version>2022.0.5-SNAPSHOT</version>
 </dependency>
 ```
