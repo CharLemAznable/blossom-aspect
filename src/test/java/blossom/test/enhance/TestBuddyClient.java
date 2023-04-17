@@ -1,7 +1,7 @@
 package blossom.test.enhance;
 
 import blossom.Blossom;
-import com.github.charlemaznable.httpclient.common.Mapping;
+import com.github.charlemaznable.httpclient.annotation.Mapping;
 import com.github.charlemaznable.httpclient.ohclient.OhClient;
 
 @OhClient
